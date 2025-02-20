@@ -1,7 +1,9 @@
 import { readContacts } from '../utils/readContacts.js';
 
 export const getAllContacts = async () => {
-    return await readContacts();
+  const contacts = await readContacts();
+  console.log(contacts);
+  console.log('Контакти успішно отримані!');
 };
 
-console.log(await getAllContacts());
+getAllContacts();

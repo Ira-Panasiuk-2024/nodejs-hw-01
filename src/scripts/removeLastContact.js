@@ -2,10 +2,11 @@ import { readContacts } from '../utils/readContacts.js';
 import { writeContacts } from '../utils/writeContacts.js';
 
 export const removeLastContact = async () => {
-    const contacts = await readContacts();
+  const contacts = await readContacts();
   if (contacts.length > 0) {
     const updatedContacts = contacts.slice(0, -1);
     await writeContacts(updatedContacts);
+    console.log('Останній контакт успішно видалений!');
   }
 };
 
